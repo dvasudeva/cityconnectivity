@@ -25,7 +25,7 @@ public class CityConnectivityController {
 		LOGGER.info("Checking Connectivity from ["+origin+ "]to["+destination+"]");
 		
 		//Validating required parameter has value, if not return bad request with Customized message
-		if(origin.isEmpty() || destination.isEmpty()){
+		if((origin == null || origin.trim().isEmpty()) || (destination == null || destination.trim().isEmpty())){
 			return new ResponseEntity<String>("Missing Required Parammeter Origin or Destination", HttpStatus.BAD_REQUEST);
 		}
 
