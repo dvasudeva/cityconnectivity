@@ -1,9 +1,11 @@
 # cityconnectivity
 
 This exercice is designed to find connectivity between 2 cities by using given mapping in CitiRoute.txt file 
-under src\main\resources\input\. Technology stack is JAVA 1.8, Spring Boot and Maven as build tool.
+under src\main\resources\input\. 
 
-This Solution accepts only 1 URI i.e. /connected with origin and destination as required parameter. 
+Technology stack is JAVA 1.8, Spring Boot and Maven as build tool.
+
+This Solution accepts only 1 URI i.e. /connected with origin and destination as required parameter. origin and destination are not case-sensitive
 
 Result:  If Connectivity found "YES" otherWise "NO"
 
