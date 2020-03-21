@@ -30,7 +30,7 @@ public class CityConnectivityService {
 	 */
 	public boolean searchConnectivity(String origin, String destination) {
 		boolean connectivityFound = false;
-		Set<String> allOrigins = findAllPossibleOrigin(origin);
+		Set<String> allOrigins = findAllPossibleOrigin(origin.toUpperCase());
 		if (allOrigins != null && !allOrigins.isEmpty()) {
 			for (String originIter : allOrigins) {
 				if (cityMappingBean.getCityToCityMapping().get(originIter) != null) {

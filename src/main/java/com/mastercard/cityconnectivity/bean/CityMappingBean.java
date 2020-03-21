@@ -38,8 +38,8 @@ public class CityMappingBean {
 			String line;
 			while ((line = bf.readLine()) != null) {
 				String[] citiRowArray = line.split(",");
-				addMapping(citiRowArray[0].trim(), citiRowArray[1].trim());
-				addMapping(citiRowArray[1].trim(), citiRowArray[0].trim());
+				addMapping(citiRowArray[0].trim().toUpperCase(), citiRowArray[1].trim().toUpperCase());
+				addMapping(citiRowArray[1].trim().toUpperCase(), citiRowArray[0].trim().toUpperCase());
 			}
 			cityToCityMapping.entrySet().forEach(entry -> LOGGER.debug(entry.getKey() + " -" + entry.getValue()));
 		}catch (IOException ioe) {
