@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mastercard.cityconnectivity.service.CityConnectivityService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
+
 public class CityConnectivityController {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(CityConnectivityController.class);
@@ -20,6 +23,9 @@ public class CityConnectivityController {
 	CityConnectivityService cityConnectivityService;
 
 	@GetMapping("/connected")
+	@ApiOperation(value="Lookup Cities Connectivity", 
+				notes="Lookup Connectivity from origin to destination directly or indirectly",
+				response=ResponseEntity.class)
 	public ResponseEntity<String> checkCitiesConnected(@RequestParam(value="origin", required=true) String origin,
 			@RequestParam(value="destination", required=true) String destination) {
 		LOGGER.info("Checking Connectivity from ["+origin+ "]to["+destination+"]");
