@@ -17,6 +17,10 @@ Validation:
 
 JUNIT: JUNT Tests are added in src\test\java\com\mastercard\cityconnectivity where three separate test cases are added to validate asserts.
 
+Swagger: Added Swagger for documentation and HTML UI to test through it.
+http://localhost:8080/swagger-ui.html
+http://localhost:8080/v2/api-docs
+
 Build application: 
 run command --> mvnw clean install
 Result: Target folder should have JAr
